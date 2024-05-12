@@ -9,7 +9,7 @@ const App = () => {
     <Router>
       <Routes>
         <Route exact path="/" element={<SearchView/>} />
-        <Route path="/detalles/:cuenta" element={<AppView/>} />
+        <Route  path="/detalles/:cuenta" element={<AppView/>} />
       </Routes>
     </Router>
   );

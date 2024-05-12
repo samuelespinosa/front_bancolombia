@@ -13,5 +13,13 @@ const fetchData = async (endpoint) => {
   }
 };
  
-const postData= async (endpoint,data) => axios.post(`${API_URL}/${endpoint}`,{...data});
+const postData= async (endpoint,data) => {
+    try{
+      const response= await axios.post(`${API_URL}/${endpoint}`,{...data});
+      return response;
+    }catch(error){
+      console.log('eorr in data.js');
+      throw error;
+    }
+  };
 export {fetchData,postData}
